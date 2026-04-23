@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { expenseAPI } from '../api';
 import { useAuth } from '../context/AuthContext';
-import { Bar, Doughnut, Line } from 'react-chartjs-2';
+import { Bar, Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement, LineElement, BarElement, Filler } from 'chart.js';
 import toast from 'react-hot-toast';
 
