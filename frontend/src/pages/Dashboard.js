@@ -59,14 +59,16 @@ export default function Dashboard() {
   const now = new Date();
 
   const loadStats = useCallback(async () => {
+    const today = new Date();
     try {
-      const res = await expenseAPI.getStats({ month: now.getMonth() + 1, year: now.getFullYear() });
+      const res = await expenseAPI.getStats({ month: today.getMonth() + 1, year: today.getFullYear() });
       setStats(res.data.data);
     } catch {
       toast.error('Failed to load stats');
     } finally {
       setLoading(false);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => { loadStats(); }, [loadStats]);
