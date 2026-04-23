@@ -1,0 +1,14 @@
+{
+  "name": "expense-tracker-mern",
+  "version": "1.0.0",
+  "description": "Full-stack MERN Expense Tracker",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\"",
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
